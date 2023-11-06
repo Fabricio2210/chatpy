@@ -20,4 +20,4 @@ Before using the application, make sure you have the following prerequisites ins
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Fabricio2210org/chatpy.git
+   git clone https://github.com/Fabricio2210/chatpy.git
