@@ -1,0 +1,77 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.pyc
+*.pyo
+__pycache__/*
+
+# Logs
+*.log
+
+# Virtual environment
+venv/
+venv3/
+.vpython/
+.python-version
+
+# Environments
+.env
+.venv
+.venv3
+.env.bak
+.venv.bak
+.venv3.bak
+
+# IDE-specific files and directories
+.idea/
+.vscode/
+*.code-workspace
+
+# Compiled Python files
+*.pyc
+
+# Database files
+*.db
+
+# Compiled C extensions
+*.so
+
+# Distribution directories
+dist/
+build/
+
+# Egg Info
+*.egg-info/
+*.egg
+
+# Compiled Java classes
+*.class
+
+# Compiled C++ files
+*.cpp
+*.o
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+Desktop.ini
+
+# Log files
+*.log
+
+# Environment variables
+.env
+.env.*
+# JSON files
+*.json
+
+# Excel XLSX files
+*.xlsx
+
+# Text files
+*.txt
+!requirements.txt
