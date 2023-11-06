@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'python3 -m pip install -r **/*requirements.txt'
+                sh 'pip install APScheduler chat-downloader schedule selenium'
             }
         }
 
