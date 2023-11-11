@@ -23,9 +23,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                // script {
-                //     sh 'sudo systemctl restart filetransfer'
-                // }
+                script {
+                    sh 'sudo systemctl restart chatpy'
+                }
             }
         }
     }
