@@ -11,7 +11,7 @@ scheduler.start()
 print("running")
 
 #chatlogs
-scheduler.add_job(chat, 'interval', minutes=2, args=["https://www.youtube.com/@DSPGaming","dsp"])
+scheduler.add_job(chat, 'interval', minutes=2, args=["https://www.youtube.com/@Pirulla25","dsp"])
 scheduler.add_job(chat, 'interval', minutes=3, args=["https://www.youtube.com/@DarkDavesMirror","ddm"])
 
 # #superchats

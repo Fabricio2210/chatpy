@@ -15,7 +15,7 @@ def superchat(video_id, subject):
     yesterday = datetime.now()
     formatted_date = yesterday.strftime("%Y-%m-%d")
 
-    shell_script = f'./{subject}/superchats/run_chat.sh'
+    shell_script = f'./{subject}/superchats/run_chat{subject}.sh'
     with open(shell_script, 'w') as file:
         file.write(f'#!/bin/bash\nchat_downloader https://www.youtube.com/watch?v={video_id} --output ./{subject}/superchats/{formatted_date}_superchats.json --message_groups "superchat"')
     if (video_id, subject) not in superchat_locks:
