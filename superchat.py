@@ -7,11 +7,10 @@ superchat_locks = {}
 
 def open_new_terminal(command):
     if platform.system() == 'Windows':
-        subprocess.run(['start', 'cmd', '/c', command], shell=True)
-    elif platform.system() == 'Linux':
-        subprocess.run(['terminator', '-e', command])
-    else:
-        raise Exception(f"Unsupported platform: {platform.system()}")
+        subprocess.Popen(['start', 'cmd', '/c', command], shell=True)
+    if platform.system() == 'Linux':
+            subprocess.Popen(['gnome-terminal', '--', 'bash', '-c', command])
+
 def superchat(video_id, subject):
     yesterday = datetime.now()
     formatted_date = yesterday.strftime("%Y-%m-%d")
