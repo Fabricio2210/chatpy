@@ -8,7 +8,7 @@ def exit_script():
 
 scheduler = BackgroundScheduler()
 scheduler.start()
-print("running!!!")
+print("running!!")
 
 #chatlogs
 scheduler.add_job(chat, 'interval', minutes=2, args=["https://www.youtube.com/@Pirulla25","dsp"])
