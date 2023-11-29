@@ -26,8 +26,9 @@ scheduler.add_job(chat, 'interval', minutes=14, args=["https://www.youtube.com/@
 scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@PieceofPeace","pop"])
 scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@doodystreams","doody"])
 # #superchats
-schedule.every(2).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGaming","dsp") )
-schedule.every(3).minutes.do(lambda: superchats("https://www.youtube.com/@doodystreams","doody"))
+schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGaming","dsp"))
+schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPReacts","reacts"))
+schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@doodystreams","doody"))
 #schedule.every().day.at("09:00").do(exit_script)
 try:
     while True:
