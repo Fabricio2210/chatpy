@@ -1,7 +1,7 @@
 import subprocess
 import time
 import schedule
-print("Running!!")
+print("Running!!!!")
 def index():
     scriptPath = "main.sh"
     try:
