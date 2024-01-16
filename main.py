@@ -8,10 +8,11 @@ def exit_script():
 
 scheduler = BackgroundScheduler()
 scheduler.start()
-print("running")
+print("running!!")
 
 #chatlogs
 scheduler.add_job(chat, 'interval', minutes=10, args=["https://www.youtube.com/@meerkat_mob","meerkat"])
+scheduler.add_job(chat, 'interval', minutes=20, args=["https://www.youtube.com/@DSPThrowback","throwback"])
 scheduler.add_job(chat, 'interval', minutes=10, args=["https://www.youtube.com/@DSPGaming","dsp"])
 scheduler.add_job(chat, 'interval', minutes=9, args=["https://www.youtube.com/@DarkDavesMirror ","ddm"])
 scheduler.add_job(chat, 'interval', minutes=9, args=["https://www.youtube.com/@RawPhil","raw"])
