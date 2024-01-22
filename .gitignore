@@ -39,7 +39,7 @@ venv3/
 dist/
 build/
 **/chatlogs/
-**/superchats
+**
 
 # Egg Info
 *.egg-info/
