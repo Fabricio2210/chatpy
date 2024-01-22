@@ -30,6 +30,7 @@ scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@
 schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGaming","dsp"))
 schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPReacts","reacts"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@doodystreams","doody"))
+schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@DSPThrowback","throwback"))
 #schedule.every().day.at("09:00").do(exit_script)
 try:
     while True:
