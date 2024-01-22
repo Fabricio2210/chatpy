@@ -38,21 +38,8 @@ venv3/
 # Distribution directories
 dist/
 build/
-aqua/
-beam/
-ddm/
-decepticron/
-doody/
-dsp/
-meerkat/
-pop/
-proper/
-raw/
-reacts/
-shinko/
-tbs/
-throwback/
-wpig/
+**/chatlogs/
+**/superchats
 
 # Egg Info
 *.egg-info/
