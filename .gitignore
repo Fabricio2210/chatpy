@@ -38,9 +38,6 @@ venv3/
 # Distribution directories
 dist/
 build/
-**/chatlogs/
-**
-
 # Egg Info
 *.egg-info/
 *.egg
