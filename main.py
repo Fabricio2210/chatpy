@@ -16,6 +16,7 @@ scheduler.add_job(chat, 'interval', minutes=20, args=["https://www.youtube.com/@
 scheduler.add_job(chat, 'interval', minutes=10, args=["https://www.youtube.com/@DSPGaming","dsp"])
 scheduler.add_job(chat, 'interval', minutes=9, args=["https://www.youtube.com/@DarkDavesMirror ","ddm"])
 scheduler.add_job(chat, 'interval', minutes=9, args=["https://www.youtube.com/@RawPhil","raw"])
+scheduler.add_job(chat, 'interval', minutes=9, args=["https://www.youtube.com/@dspraw","raw"])
 scheduler.add_job(chat, 'interval', minutes=20, args=["https://www.youtube.com/@DSPReacts","reacts"])
 scheduler.add_job(chat, 'interval', minutes=10, args=["https://www.youtube.com/@ShinkoFleur","shinko"])
 scheduler.add_job(chat, 'interval', minutes=20, args=["https://www.youtube.com/@AgentProper","proper"])
