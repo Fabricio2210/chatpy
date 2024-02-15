@@ -16,7 +16,7 @@ def superchat(video_id, subject):
     shell_script = f'./{subject}/superchats/run_chat{subject}.sh'
     log_file = f'{subject}_log.txt'
     with open(shell_script, 'w') as file:
-        file.write(f'#!/bin/bash\nchat_downloader https://www.youtube.com/watch?v={video_id} --output ./{subject}/superchats/{formatted_date}_superchats.json --message_groups "superchat"')
+        file.write(f'#!/bin/bash\nchat_downloader https://www.youtube.com/watch?v={video_id} --output ./{subject}/superchats/{formatted_date}_{video_id}_superchats.json --message_groups "superchat"')
 
     if (video_id, subject) not in superchat_locks:
         command = ['bash', shell_script]

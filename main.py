@@ -2,6 +2,7 @@ import time
 import schedule
 import sys
 from  wrapper import chat, superchats
+from joinFiles import joinFiles
 from apscheduler.schedulers.background import BackgroundScheduler
 def exit_script():
     sys.exit()
@@ -10,7 +11,7 @@ scheduler = BackgroundScheduler()
 scheduler.start()
 print("running!!")
 
-#chatlogs
+# #chatlogs
 scheduler.add_job(chat, 'interval', minutes=10, args=["https://www.youtube.com/@meerkat_mob","meerkat"])
 scheduler.add_job(chat, 'interval', minutes=20, args=["https://www.youtube.com/@DSPThrowback","throwback"])
 scheduler.add_job(chat, 'interval', minutes=10, args=["https://www.youtube.com/@DSPGaming","dsp"])
@@ -32,7 +33,7 @@ schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGa
 schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPReacts","reacts"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@doodystreams","doody"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@DSPThrowback","throwback"))
-#schedule.every().day.at("09:00").do(exit_script)
+schedule.every().day.at("08:00").do(lambda: joinFiles("./dsp/superchats"))
 try:
     while True:
         time.sleep(1)
