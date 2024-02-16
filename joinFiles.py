@@ -12,10 +12,13 @@ def joinFiles(folder_path):
             data = json.load(f)
             all_data.extend(data)
     
-    output_file_name = f"{today_date}_superchats.json"
-    output_file_path = folder / output_file_name
+    if len(all_data) == 0:
+        print(f"There is no files today for {folder_path}")
+    else:
+        output_file_name = f"{today_date}_superchats.json"
+        output_file_path = folder / output_file_name
 
-    with open(output_file_path, 'w') as output_file:
-        json.dump(all_data, output_file)
+        with open(output_file_path, 'w') as output_file:
+            json.dump(all_data, output_file)
 
-    print(f"All matching JSON files have been aggregated into {output_file_path}")
+        print(f"All matching JSON files have been aggregated into {output_file_path}")
