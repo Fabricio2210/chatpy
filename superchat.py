@@ -1,8 +1,7 @@
 import subprocess
 from datetime import datetime
 import threading
-import platform
-
+import uuid
 superchat_locks = {}
 
 def open_new_terminal(command, log_file):
@@ -10,13 +9,14 @@ def open_new_terminal(command, log_file):
         subprocess.Popen(command, stdout=log, stderr=log)
 
 def superchat(video_id, subject):
+    myuuid = uuid.uuid4()
     yesterday = datetime.now()
     formatted_date = yesterday.strftime("%Y-%m-%d")
 
     shell_script = f'./{subject}/superchats/run_chat{subject}.sh'
     log_file = f'{subject}_log.txt'
     with open(shell_script, 'w') as file:
-        file.write(f'#!/bin/bash\nchat_downloader https://www.youtube.com/watch?v={video_id} --output ./{subject}/superchats/{formatted_date}_{video_id}_superchats.json --message_groups "superchat"')
+        file.write(f'#!/bin/bash\nchat_downloader https://www.youtube.com/watch?v={video_id} --output ./{subject}/superchats/{formatted_date}_{str(myuuid)}_superchats.json --message_groups "superchat"')
 
     if (video_id, subject) not in superchat_locks:
         command = ['bash', shell_script]
