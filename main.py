@@ -29,7 +29,7 @@ scheduler.add_job(chat, 'interval', minutes=14, args=["https://www.youtube.com/@
 scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@PieceofPeace","pop"])
 scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@doodystreams","doody"])
 # #superchats
-schedule.every(09).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGaming","dsp"))
+schedule.every(9).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGaming","dsp"))
 schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPReacts","reacts"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@doodystreams","doody"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@DSPThrowback","throwback"))
