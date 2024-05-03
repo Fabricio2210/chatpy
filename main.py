@@ -30,12 +30,12 @@ scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@
 scheduler.add_job(chat, 'interval', minutes=11, args=["https://www.youtube.com/@doodystreams","doody"])
 # #superchats
 schedule.every(9).minutes.do(lambda: superchats("https://www.youtube.com/@DSPGaming","dsp"))
-schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPReacts","reacts"))
+#schedule.every(10).minutes.do(lambda: superchats("https://www.youtube.com/@DSPReacts","reacts"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@doodystreams","doody"))
 schedule.every(15).minutes.do(lambda: superchats("https://www.youtube.com/@DSPThrowback","throwback"))
 # joinfiles
 schedule.every().day.at("07:00").do(lambda: joinFiles("./dsp/superchats"))
-schedule.every().day.at("07:02").do(lambda: joinFiles("./throwback/superchats"))
+#schedule.every().day.at("07:02").do(lambda: joinFiles("./throwback/superchats"))
 schedule.every().day.at("07:04").do(lambda: joinFiles("./reacts/superchats"))
 schedule.every().day.at("07:06").do(lambda: joinFiles("./doody/superchats"))
 try:
